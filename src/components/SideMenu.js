@@ -6,7 +6,7 @@ import {
   CogIcon,
 } from "@heroicons/react/outline";
 import { ChipIcon } from "@heroicons/react/outline";
-import { Link, useLocation } from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 import { useEffect } from "react";
 
 function Header(props) {
@@ -34,24 +34,27 @@ function MenuItem(props) {
   }
 
   return (
-    <Link
-      to={props.to}
-      replace
-      className={
-        "lg:mx-2 py-4 lg:py-2 lg:px-3 flex justify-center lg:justify-start space-x-4 items-center truncate " +
-        activeClass
-      }
-    >
-      {props.children}
-      <span className="hidden lg:inline">{props.title}</span>
-    </Link>
+    <Router>
+      <Link
+        to={props.to}
+        replace
+        className={
+          "lg:mx-2 py-4 lg:py-2 lg:px-3 flex justify-center lg:justify-start space-x-4 items-center truncate " +
+          activeClass
+        }
+      >
+        {props.children}
+        <span className="hidden lg:inline">{props.title}</span>
+      </Link>
+    </Router>
   );
 }
 
 function SideMenu(props) {
   const itemIconClass = "w-8 h-8 lg:w-5 lg:h-5";
 
-  const location = useLocation();
+  const location = "";
+//   const location = useLocation();
 
   useEffect(() => [location]);
 

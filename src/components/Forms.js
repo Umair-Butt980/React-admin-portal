@@ -1,4 +1,4 @@
-import UserAvater from "../template/profile.png";
+import UserAvater from "../assests/images/profile.png";
 import { PhoneIcon, BriefcaseIcon } from "@heroicons/react/outline";
 
 let defaultInputClass =

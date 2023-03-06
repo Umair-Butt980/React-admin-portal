@@ -1,4 +1,4 @@
-import UserAvatar from "./profile.png";
+import UserAvatar from "../assests/images/profile.png";
 import {
   SearchIcon,
   LogoutIcon,
